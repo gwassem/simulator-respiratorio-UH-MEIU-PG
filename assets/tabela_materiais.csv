@@ -1,0 +1,23 @@
+Item,Categoria,Quantidade,Responsável,Observações
+Impressora 3D,Protótipo Mecânico,1,Equipe,"Para fabricações iniciais em PLA/resina"
+Filamento PLA,Materiais de Protótipo,Kg 2,Materiais,
+Resina,Materiais de Protótipo,L 1,Materiais,"Caso utilize impressão SLA"
+Silicone moldável,Protótipo Mecânico,500g,Protótipo,"Para revestimento e moldes"
+Arduino/ESP32,Eletrônica,2,Eletrônica,"Microcontroladores para testes"
+Drivers e relés,Eletrônica,Lot,Eletrônica,
+Sensores de força,Sensorização,2,Eletrônica,"Para medir força aplicada"
+Sensores de deslocamento,Sensorização,2,Eletrônica,
+Sensores de fluxo de ar,Sensorização,2,Eletrônica,
+Mini compressor de ar,Pneumática,1,Pneumática,
+Válvula pneumática 4 vias,Pneumática,1,Pneumática,
+Tubulação pneumática,Pneumática,2m,Pneumática,
+Bexigas de silicone,Protótipo Mecânico,2,Protótipo,"Representação dos pulmões"
+EVA foam,Revestimento,Placas 5,Protótipo,"Simular pele"
+Silicone para revestimento externo,Revestimento,500g,Protótipo,
+Software CAD,Ferramentas,"Licença ou open-source",Design,
+IDE Arduino/Plataforma ESP32,Ferramentas,Instalação,Eletrônica,
+Ferramentas manuais,Ferramentas,"Kit básico",Equipe,"Chaves, alicates, etc."
+Equipamentos de segurança,Segurança,"Luvas, máscaras",Equipe,
+Calibradores e pesos,Calibração,Conjunto,Validação,"Para testes de precisão"
+Documentação técnica (datasheets),Documentação,Digital,Equipe,
+Plano de testes,Planejamento,Template,Validação,

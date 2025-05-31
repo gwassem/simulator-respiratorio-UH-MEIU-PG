@@ -1,0 +1,46 @@
+flowchart LR
+  %% Definição de Estilos
+  classDef blue fill:#cfe2ff,stroke:#0366d6,stroke-width:2px;
+  classDef green fill:#d1e7dd,stroke:#046b4c,stroke-width:2px;
+  classDef orange fill:#ffe5b4,stroke:#d17b00,stroke-width:2px;
+  classDef gray fill:#f0f0f0,stroke:#888888,stroke-width:1px,stroke-dasharray: 2 2;
+
+  %% Espaçadores para evitar sobreposição de títulos
+  subgraph "Etapa 1 – Coleta de Requisitos e Sinais"
+    direction LR
+    spacer1([ ]):::gray
+    A1["Fontes Clínicas (Protocolos HU)"]:::blue
+    A2["Requisitos Técnicos (Sensores & Mecânica)"]:::blue
+  end
+
+  subgraph "Etapa 2 – Desenvolvimento do Protótipo"
+    direction LR
+    spacer2([ ]):::gray
+    B1["Modelagem 3D (PLA / SLA)"]:::green
+    B2["Eletrônica & Firmware (ESP32 + Drivers + Sensores)"]:::green
+    B3["Sistemas Pneumáticos (Compressor, Válvulas, Bexigas)"]:::green
+    B4["Revestimento & Acabamento (EVA, Silicone)"]:::green
+  end
+
+  subgraph "Etapa 3 – Testes, Feedback & Iteração"
+    direction LR
+    spacer3([ ]):::gray
+    C1["Calibração (Calibradores & Pesos)"]:::orange
+    C2["Feedback de Usuários (Formulário)"]:::orange
+    C3["Iteração do Protótipo (Ajustes)"]:::orange
+  end
+
+  %% Fluxos
+  A1 --> A2
+  A2 --> B1
+  B1 --> B2
+  B2 --> B3
+  B3 --> B4
+  B4 --> C1
+  C1 --> C2
+  C2 --> C3
+  C3 --> A1
+
+  %% Nota de Apoio
+  Note["Ciclo contínuo de refinamento a cada semestre."]:::gray
+  C3 --> Note

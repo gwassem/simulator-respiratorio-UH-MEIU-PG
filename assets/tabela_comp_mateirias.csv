@@ -1,0 +1,7 @@
+Material,Resistência Mecânica,Rigidez/Flexibilidade,Precisão & Detalhe,Acabamento Superficial,Biocompatibilidade,Facilidade de Impressão,Custo Aproximado (R$/kg)
+PLA,Média,Alta rigidez,Boa,Suave,Baixa (não esterilizável),Muito fácil,100–140
+ABS,Alta,Moderada,Média,Levemente rugoso,Baixa,Média (requer mesa aquecida),60–75
+PETG,Alta,Leve flexibilidade,Boa,Suave,Moderada,Fácil,130–180
+TPU,Baixa,Muito flexível,Média,Suave,Moderada,Média (ajuste de retração),230–330
+Resina (SLA),Baixa a média,Rígida (depende da formulação),Excelente,Excelente,Variável (há resinas biocompatíveis),Difícil (cura e manuseio),115–290
+Nylon,Muito alta,Flexível,Média,Médio,Baixa,Difícil (absorve umidade),90–160

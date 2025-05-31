@@ -1,0 +1,49 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs e editores
+.vscode/
+.idea/
+*.code-workspace
+
+# Build e diretórios de saída
+/build/
+/dist/
+/out/
+
+# Compilados e objetos
+*.o
+*.elf
+*.hex
+
+# Firmware / Arduino
+*.bin
+*.eep
+*.map
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+env/
+venv/
+
+# Node / JavaScript (se houver frontend)
+node_modules/
+
+# Ambientes e variáveis de ambiente
+.env
+.env.*
+
+# Arquivos temporários e de log
+*.log
+*.tmp
+*.swp
+
+# Arquivos de documentação gerada
+/docs/_build/
+
+# Arquivos de backup
+*~
+*.bak
