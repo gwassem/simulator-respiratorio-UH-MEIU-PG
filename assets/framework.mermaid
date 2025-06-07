@@ -1,46 +1,54 @@
-flowchart LR
-  %% Definição de Estilos
-  classDef blue fill:#cfe2ff,stroke:#0366d6,stroke-width:2px;
-  classDef green fill:#d1e7dd,stroke:#046b4c,stroke-width:2px;
-  classDef orange fill:#ffe5b4,stroke:#d17b00,stroke-width:2px;
-  classDef gray fill:#f0f0f0,stroke:#888888,stroke-width:1px,stroke-dasharray: 2 2;
+flowchart TD
+  %% --- Definição de Estilos ---
+  classDef etapa1 fill:#cfe2ff,stroke:#0366d6,stroke-width:2px,color:#000;
+  classDef etapa2 fill:#d1e7dd,stroke:#046b4c,stroke-width:2px,color:#000;
+  classDef etapa3 fill:#ffe5b4,stroke:#d17b00,stroke-width:2px,color:#000;
+  classDef note fill:#f0f0f0,stroke:#888888,stroke-width:1px,stroke-dasharray: 2 2,color:#333;
 
-  %% Espaçadores para evitar sobreposição de títulos
-  subgraph "Etapa 1 – Coleta de Requisitos e Sinais"
-    direction LR
-    spacer1([ ]):::gray
-    A1["Fontes Clínicas (Protocolos HU)"]:::blue
-    A2["Requisitos Técnicos (Sensores & Mecânica)"]:::blue
+  %% --- Etapa 1: Planejamento e Definição ---
+  subgraph "Etapa 1 – Planejamento e Definição"
+    direction TB
+    A1["Fontes Clínicas (HU) e<br>Feedback Inicial de Usuários"]:::etapa1
+    A2["Análise de Riscos do Projeto"]:::etapa1
+    A3["Análise Funcional e<br>Especificações Técnicas"]:::etapa1
+    A4["Definição dos<br>Critérios de Aceite"]:::etapa1
   end
 
-  subgraph "Etapa 2 – Desenvolvimento do Protótipo"
-    direction LR
-    spacer2([ ]):::gray
-    B1["Modelagem 3D (PLA / SLA)"]:::green
-    B2["Eletrônica & Firmware (ESP32 + Drivers + Sensores)"]:::green
-    B3["Sistemas Pneumáticos (Compressor, Válvulas, Bexigas)"]:::green
-    B4["Revestimento & Acabamento (EVA, Silicone)"]:::green
+  %% --- Etapa 2: Projeto e Desenvolvimento ---
+  subgraph "Etapa 2 – Projeto e Desenvolvimento do Protótipo"
+    direction TB
+    B1["Arquitetura do Sistema<br>(Blocos, Funções, Materiais)"]:::etapa2
+    B2["Modelagem 3D (Estrutura e Mecânica)"]:::etapa2
+    B3["Eletrônica, Firmware e Interface<br>(ESP32, Sensores, UI)"]:::etapa2
+    B4["Sistema Pneumático<br>(Compressor, Válvulas, Bexigas)"]:::etapa2
+    B5["Montagem, Revestimento e<br>Acabamento (EVA, Silicone)"]:::etapa2
   end
 
-  subgraph "Etapa 3 – Testes, Feedback & Iteração"
-    direction LR
-    spacer3([ ]):::gray
-    C1["Calibração (Calibradores & Pesos)"]:::orange
-    C2["Feedback de Usuários (Formulário)"]:::orange
-    C3["Iteração do Protótipo (Ajustes)"]:::orange
+  %% --- Etapa 3: Testes, Validação e Iteração ---
+  subgraph "Etapa 3 – Testes, Validação e Iteração"
+    direction TB
+    C1["Testes de Integração e<br>Calibração Técnica"]:::etapa3
+    C2["Testes de Usabilidade<br>com Fisioterapeutas"]:::etapa3
+    C3["Análise dos Resultados<br>vs. Critérios de Aceite"]:::etapa3
+    C4["Decisão de Iteração e<br>Planejamento dos Ajustes"]:::etapa3
   end
 
-  %% Fluxos
-  A1 --> A2
-  A2 --> B1
-  B1 --> B2
-  B2 --> B3
-  B3 --> B4
-  B4 --> C1
-  C1 --> C2
-  C2 --> C3
-  C3 --> A1
+  %% --- Fluxos Principais ---
+  A1 --> A2 --> A3 --> A4
+  A4 --> B1
+  B1 --> B2 & B3 & B4
+  B2 --> B5
+  B3 --> B5
+  B4 --> B5
+  B5 --> C1
+  C1 --> C2 --> C3 --> C4
 
-  %% Nota de Apoio
-  Note["Ciclo contínuo de refinamento a cada semestre."]:::gray
-  C3 --> Note
+  %% --- Ciclos de Feedback e Iteração ---
+  C4 -.->|"Ajustes no Protótipo<br>(Ciclo Rápido)"| B1
+  C4 -->|"Revisão Estratégica<br>(Ciclo Semestral)"| A1
+
+  %% --- Nota Adicional ---
+  N1["<b>Documentação Contínua</b><br>Gerada em todas as etapas"]:::note
+  A4 -.-> N1
+  B5 -.-> N1
+  C4 -.-> N1
